@@ -2,7 +2,9 @@
   import { T } from '@threlte/core'
   import { ContactShadows, Float, Grid, OrbitControls, Environment } from '@threlte/extras'
 
-  import Model from "./models/Gleem_Can_DragonFruitMango.svelte"
+  import Can from "./models/Gleem_Can_DragonFruitMango.svelte"
+  import Dragonfruit from "./models/Dragonfruit.svelte"
+  import Mango from "./models/Mango.svelte"
 </script>
 
 <Environment
@@ -50,10 +52,12 @@
 />
 
 <Float
-  floatIntensity={1}
+  floatIntensity={0.5}
   floatingRange={[0, 1]}
 >
-  <Model scale={0.5} />
+  <Can scale={0.5} />
+  <Dragonfruit scale={0.5} position.x={1} />
+  <Mango scale={0.5} position.y={0.5} position.x={-1.25} />
 </Float>
 
 
